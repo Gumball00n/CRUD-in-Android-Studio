@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--membuat textview yang berisi tulisan APLIKASI KASIR TERBARU-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:text="Program Kasir"
+            android:textSize="32dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_marginBottom="12dp"/>
+        <RelativeLayout
+            android:background="#dddddd"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+        <LinearLayout
+            android:layout_marginTop="12dp"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Barang"
+                    android:textSize="20dp" />
+                <Spinner
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNamaBarang"
+                    android:entries="@array/namaBarang"/>
+            </LinearLayout>
+
+            <!--membuat edittext untuk menginput harga-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Harga"
+                    android:textSize="20dp" />
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan Harga "
+                    android:id="@+id/txtHargaBarang"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah"
+                    android:textSize="20dp" />
+                <Spinner
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtJumlahBarang"
+                    android:entries="@array/jumlahBarang"/>
+            </LinearLayout>
+            <!--membuat spinner yang berisi daftar jumlah-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Diskon"
+                    android:textSize="20dp" />
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan Diskon"
+                    android:id="@+id/txtDiskonBarang"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Beli"
+                    android:textSize="20dp" />
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="Masukkan Tanggal"
+                    android:id="@+id/txtTanggalBeli"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Beli"
+                    android:textSize="20dp" />
+                <Spinner
+                    android:layout_weight="1"
+                    android:layout_marginBottom="11dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtNamaKasir"
+                    android:entries="@array/namaKasir"/>
+            </LinearLayout>
+            <!--membuat spinner yang berisi daftar penjaga kasir-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp">
+            <!--membuat button simpan-->
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginBottom="11dp"
+                android:layout_weight="1"
+                android:backgroundTint="#0081C9"
+                android:onClick="btnSimpan"
+                android:text="Simpan"
+                android:textSize="20dp" />
+            <!--membuat button tampil data-->
+            <Button
+                android:id="@+id/btnTampilData"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="2dp"
+                android:layout_marginBottom="11dp"
+                android:layout_weight="1"
+                android:backgroundTint="#0081C9"
+                android:text="Tampil Data"
+                android:textSize="20dp" />
+        </LinearLayout>
+        <!--membuat edittext untuk menginput nama barang-->
+    </LinearLayout>
+
+
+</LinearLayout>

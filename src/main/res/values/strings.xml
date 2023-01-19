@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Program Kasir</string>
+    <string-array name="namaBarang">
+        <item>Pilih Barang</item>
+        <item>Pensil</item>
+        <item>Buku</item>
+        <item>Penggaris</item>
+        <item>Balpoin</item>
+        <item>Pensil Warna</item>
+    </string-array>
+    <string-array name="jumlahBarang">
+        <item>Tentukan Jumlahnya</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="namaKasir">
+        <item>Pilih Kasir</item>
+        <item>Dimas</item>
+        <item>Juned</item>
+        <item>Siti</item>
+        <item>Nur Alif</item>
+    </string-array>
+</resources>
